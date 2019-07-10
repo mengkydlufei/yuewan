@@ -25,13 +25,10 @@ Page({
       }
     })
   },
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-    // this.setData({
-    //   personList:
-    // })
+  getPersonList:function(page=0,size=7){
+    wx.showLoading({
+      title: '加载中...',
+    })
     let tempList = []
     let baseObj = {
       id:1,
@@ -42,13 +39,22 @@ Page({
       likeCount:0,
       title:"this is xixi"
     }
-    for( let i = 0; i < 7 ; i++ ){
+    for( let i = 0; i < size ; i++ ){
       baseObj = {...baseObj,id:i,name:`mistletoe${i}`,imgSrc:`../../static/img/${i+1}.png`} 
       tempList.push(baseObj)
     }
-    this.setData({
-      personList:[...tempList,...tempList,...tempList]
-    })
+    setTimeout(() => {
+      this.setData({
+        personList:[...this.data.personList,...tempList]
+      })    
+      wx.hideLoading()
+    }, 1000);
+  },
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad: function (options) {
+    this.getPersonList()
   },
 
   /**
@@ -83,14 +89,18 @@ Page({
    * Page event handler function--Called when user drop down
    */
   onPullDownRefresh: function () {
-
+    this.setData({
+      personList:[]
+    })
+    this.getPersonList()
+    wx.stopPullDownRefresh()
   },
 
   /**
    * Called when page reach bottom
    */
   onReachBottom: function () {
-
+    this.getPersonList()
   },
 
   /**
