@@ -5,7 +5,20 @@ Page({
    * Page initial data
    */
   data: {
-    personInfo:{}
+    personInfo:{},
+    imgUrls: [
+      '../../static/img/1.jpg',
+      '../../static/img/2.jpg',
+      '../../static/img/3.jpg',
+      '../../static/img/4.jpg',
+      '../../static/img/5.jpg',
+      '../../static/img/6.jpg',
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    circular:true,
+    interval: 5000,
+    duration: 1000,
   },
 
   /**

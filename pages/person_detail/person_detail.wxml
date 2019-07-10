@@ -1,5 +1,95 @@
 <!--pages/person_detail/person_detail.wxml-->
 <view class='person-detail'>
-  <text>pages/person_detail/person_detail.wxml</text>
+  <swiper
+    class='swiper'
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}"
+    circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <van-icon class='order-icon' name='paid'></van-icon>
+  <container class='detail-wrapper'>
+    <view class='particular-info'>
+      <view class="tag-title">
+        <text>活动信息</text>
+      </view>
+      <van-row>
+        <van-col span='20'>
+          <van-row gutter='5' class='particular-wrapper'>
+            <van-col offset='1' span="6">
+              <text class='detail-label'>活动名称: </text>
+            </van-col>
+            <van-col span="17">
+              <text class="detail-content">啊哈哈哈哈asd</text>
+            </van-col>
+            <van-col offset='1' span="6">
+              <text class='detail-label'>活动地址: </text>
+            </van-col>
+            <van-col span="17">
+              <text class="detail-content">啊哈哈哈哈</text>
+            </van-col>
+            <van-col offset='1' span="6">
+              <text class='detail-label'>活动内容: </text>
+            </van-col>
+            <van-col span="17" >
+              <text class="detail-content">啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈
+              </text>
+            </van-col>
+          </van-row>
+        </van-col>
+        <van-col span='4' class='like-icon-wrapper'>
+          <view class='basic-right'><van-icon class='like-icon' name="like-o" /></view>
+        </van-col>
+      </van-row>
+      
+      <view style='margin-top:0.5rem;' class="tag-title">
+        <text>发起者信息</text>
+      </view>
+      <van-row>
+        <van-col offset='1' span='5'>
+          <image class='avatar' src="../../static/img/2.png" alt="avatar"/>
+        </van-col>
+        <van-col span='18' style='height:3.5rem;display:flex;align-items:center;'>
+          {{personInfo.name||'加载中'}}
+        </van-col>
+        <van-col offset='1' span='5'>
+          年龄：
+        </van-col>
+        <van-col span='18'>
+          {{personInfo.age||21}}
+        </van-col>
+        <van-col offset='1' span='5'>
+          性别：
+        </van-col>
+        <van-col span='18'>
+          {{personInfo.sex||'女'}}
+        </van-col>
+        <van-col offset='1' span='5'>
+          身高：
+        </van-col>
+        <van-col span='18'>
+          {{personInfo.height||180}}cm
+        </van-col>
+        <van-col offset='1' span='5'>
+          体重：
+        </van-col>
+        <van-col span='18'>
+          {{personInfo.weight||48}}kg
+        </van-col>
+        <van-col offset='1' span='5'>
+          星座：
+        </van-col>
+        <van-col span='18'>
+          {{personInfo.constellation||'射手座'}}
+        </van-col>
+      </van-row>
+    </view>
+  </container>
 </view>
 
