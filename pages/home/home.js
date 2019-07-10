@@ -7,7 +7,8 @@ Page({
    * Page initial data
    */
   data: {
-    personList:[]
+    personList:[],
+    timer:null,
   },
 
   handleCardClick(res){
@@ -28,6 +29,7 @@ Page({
   getPersonList:function(page=0,size=7){
     wx.showLoading({
       title: '加载中...',
+      mask:true
     })
     let tempList = []
     let baseObj = {
@@ -43,12 +45,18 @@ Page({
       baseObj = {...baseObj,id:i,name:`mistletoe${i}`,imgSrc:`../../static/img/${i+1}.png`} 
       tempList.push(baseObj)
     }
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       this.setData({
         personList:[...this.data.personList,...tempList]
       })    
       wx.hideLoading()
+      if(this.data.timer){
+        clearTimeout(this.data.timer)
+      }
     }, 1000);
+    this.setData({
+      timer:timer
+    })
   },
   /**
    * Lifecycle function--Called when page load

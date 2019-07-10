@@ -19,6 +19,7 @@ Page({
     circular:true,
     interval: 5000,
     duration: 1000,
+    timer:null
   },
 
   /**
@@ -71,7 +72,20 @@ Page({
    * Page event handler function--Called when user drop down
    */
   onPullDownRefresh: function () {
-
+    wx.showLoading({
+      title: '加载中...',
+      mask:true
+    })
+    const timer = setTimeout(() => {
+      wx.hideLoading()
+      wx.stopPullDownRefresh()
+      if(this.data.timer){
+        clearTimeout(this.data.timer)
+      }
+    }, 1000);
+    this.setData({
+      timer
+    })
   },
 
   /**

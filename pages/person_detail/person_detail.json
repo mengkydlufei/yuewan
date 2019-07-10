@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"加载中..."
+  "navigationBarTitleText":"加载中...",
+  "enablePullDownRefresh":true
 }
