@@ -1,0 +1,8 @@
+<!--components/waterfall_list/waterfall_list.wxml-->
+<view class='waterfall-list-wrapper'>
+  <van-row gutter='10' class='waterfall-list'>
+    <van-col wx:for="{{personList}}" data-id='{{item.id}}' wx:key="{{item.id}}" bind:tap='handleTapCard' span="12">
+      <zuwan-card user-info='{{item}}'></zuwan-card>
+    </van-col>
+  </van-row>
+</view>
