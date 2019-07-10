@@ -9,7 +9,7 @@
     circular="{{circular}}">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
-        <image src="{{item}}" class="slide-image"/>
+        <image bind:tap='handlePreviewImg' data-src='{{item}}' src="{{item}}" class="slide-image"/>
       </swiper-item>
     </block>
   </swiper>

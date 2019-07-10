@@ -1,1 +1,10 @@
 /* pages/mine/mine.wxss */
+.mine-header {
+  display: flex;
+  justify-content: center;
+}
+.user-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}

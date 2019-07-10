@@ -1,2 +1,8 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view>
+
+  <header class='mine-header'>
+    <image class='user-avatar' src="../../static/img/1.png" alt="user-avatar"/>
+  </header>
+
+</view>

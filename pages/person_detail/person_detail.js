@@ -13,6 +13,9 @@ Page({
       '../../static/img/4.jpg',
       '../../static/img/5.jpg',
       '../../static/img/6.jpg',
+      // 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+      // 'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+      // 'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
     ],
     indicatorDots: true,
     autoplay: true,
@@ -20,6 +23,13 @@ Page({
     interval: 5000,
     duration: 1000,
     timer:null
+  },
+
+  handlePreviewImg(e){
+    wx.previewImage({
+      current: e.currentTarget.dataset.src, // 当前显示图片的http链接
+      urls: this.data.imgUrls // 需要预览的图片http链接列表
+    })
   },
 
   /**
