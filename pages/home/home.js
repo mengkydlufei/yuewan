@@ -1,5 +1,5 @@
 // pages/home/home.js
-import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
+// import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
 
 Page({
 
@@ -7,35 +7,22 @@ Page({
    * Page initial data
    */
   data: {
-    personList:[
-      {
-        id:0,
-        name:'mistletoe',
-        imgSrc:'../../static/img/1.png',
-        location:'福州市',
-        isLiked:false,
-        likeCount:0,
-        title:"i'm title"
-      },
-      {
-        id:1,
-        name:'guygubaby',
-        imgSrc:'../../static/img/2.png',
-        location:'上海市',
-        isLiked:false,
-        likeCount:0,
-        title:"this is xixi"
-      }
-    ]
+    personList:[]
   },
 
   handleCardClick(res){
     const {detail:id} = res
     const clickedPerson = this.data.personList.find(item=>item.id===id)
     console.log('clickedPerson: ', clickedPerson);
-    Toast({
-      duration:2000,
-      message:clickedPerson.name
+    // Toast.success({
+    //   duration:2000,
+    //   message:`${clickedPerson.name}`
+    // })
+    wx.navigateTo({
+      url: `../person_detail/person_detail?id=${id}`,
+      success: function(res) {
+        res.eventChannel.emit('personInfo', { data: clickedPerson })
+      }
     })
   },
   /**
@@ -60,7 +47,7 @@ Page({
       tempList.push(baseObj)
     }
     this.setData({
-      personList:tempList
+      personList:[...tempList,...tempList,...tempList]
     })
   },
 

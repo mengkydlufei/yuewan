@@ -1,0 +1,5 @@
+<!--pages/person_detail/person_detail.wxml-->
+<view class='person-detail'>
+  <text>pages/person_detail/person_detail.wxml</text>
+</view>
+

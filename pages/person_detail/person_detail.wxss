@@ -1,0 +1,5 @@
+/* pages/person_detail/person_detail.wxss */
+.person-detail {
+  width: 98%;
+  margin: 0 1%;
+}
