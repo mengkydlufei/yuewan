@@ -1,3 +1,7 @@
+import api from './api'
+
+const url = api.baseUrl
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -14,6 +18,31 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const chooseImage = () => {
+  return new Promise((resolve,reject) => {
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: url+'user/uploadFile',
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success: (result) => {
+            let imgData = JSON.parse(result.data)
+            resolve(imgData)
+          },
+          fail:(error) => {
+            reject(error)
+          }
+        })
+      },
+    })
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime,
+  chooseImage
 }
