@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/mine/mine",
     "pages/post/post",
-    "pages/activityDetail/activityDetail"
+    "pages/activityDetail/activityDetail",
+    "pages/postUserDetail/postUserDetail",
+    "pages/activityList/activityList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,10 +41,12 @@
     ]
   },
   "usingComponents": {
-    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "van-button": "./miniprogram_npm/vant-weapp/button/index",
     "van-icon": "./miniprogram_npm/vant-weapp/icon/index",
-    "van-row": "../../miniprogram_npm/vant-weapp/row/index",
-    "van-col": "../../miniprogram_npm/vant-weapp/col/index",
-    "van-tag": "../../miniprogram_npm/vant-weapp/tag/index"
+    "van-row": "./miniprogram_npm/vant-weapp/row/index",
+    "van-col": "./miniprogram_npm/vant-weapp/col/index",
+    "van-tag": "./miniprogram_npm/vant-weapp/tag/index",
+    "van-cell": "./miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "./miniprogram_npm/vant-weapp/cell-group/index"
   }
 }

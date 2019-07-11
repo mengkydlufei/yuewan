@@ -1,0 +1,46 @@
+<!--pages/postUserDetail/postUserDetail.wxml-->
+<container class="post-user">
+  <header class="header">
+    <swiper
+      class='swiper'
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" 
+      interval="{{interval}}" 
+      duration="{{duration}}"
+      circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image bind:tap='handlePreviewImg' data-src='{{item}}' src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </header>
+  <section class='body'>
+    <view style='margin-top:0.5rem;' class="tag-title">
+     </view>
+      <van-row>
+        <van-col offset='1' span='4'>
+          <image class='avatar' src="{{postUserInfo.imgSrc}}" alt="avatar"/>
+        </van-col>
+        <van-col span='19' style='height:3.5rem;display:flex;'>
+          <view class='basic-info'>
+            <text class='post-user-name'>{{postUserInfo.name||'加载中'}}</text>
+            <text class='post-user-address'>{{postUserInfo.location}}  {{postUserInfo.constellation}}</text>
+          </view>
+        </van-col>
+      </van-row>
+      <van-cell-group border="{{ false }}">
+        <van-cell title="职业" value="{{postUserInfo.profession||'学生'}}" />
+        <van-cell title="年龄" value="{{postUserInfo.age||21}}" />
+        <van-cell title="性别" value="{{postUserInfo.sex||'女'}}" />
+        <van-cell title="身高" value="{{postUserInfo.height||168}}cm" />
+        <van-cell title="体重" value="{{postUserInfo.weight||48}}kg" />
+        <van-cell title="星座" value="{{postUserInfo.constellation||'射手座'}}" />
+        <van-cell title="个性签名" value="" label="啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈" border="{{ true }}" />
+        <van-cell title="TA发布的活动" 
+          is-link 
+          link-type="navigateTo"
+          url="/pages/activityList/activityList?id={{postUserInfo.id}}" />
+      </van-cell-group>
+  </section>
+</container>

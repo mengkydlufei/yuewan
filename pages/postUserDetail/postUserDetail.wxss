@@ -1,0 +1,25 @@
+/* pages/postUserDetail/postUserDetail.wxss */
+.swiper {
+  height: 48vh;
+}
+
+.slide-image {
+  width: 100vw;
+  height: 48vh;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.post-user-address {
+  font-size: 0.8rem;
+}
+
+.basic-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

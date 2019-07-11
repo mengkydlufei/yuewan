@@ -31,6 +31,16 @@ Page({
     })
   },
 
+  previewUserDetail(e){
+    // const {currentTarget:{dataset:{id}}} = e
+    wx.navigateTo({
+      url: `../postUserDetail/postUserDetail`,
+      success: (res) => {
+        res.eventChannel.emit('postUserInfo', { data: this.data.personInfo })
+      }
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

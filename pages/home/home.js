@@ -38,7 +38,8 @@ Page({
       imgSrc:'../../static/img/2.png',
       location:'上海市',
       status:0,
-      title:"this is xixi"
+      title:"this is xixi",
+      constellation: '射手座'
     }
     for( let i = 0; i < size ; i++ ){
       baseObj = {...baseObj,id:i,name:`mistletoe${i}`,imgSrc:`../../static/img/${i+1}.png`,status:i%2} 
