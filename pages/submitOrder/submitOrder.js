@@ -1,35 +1,46 @@
-// pages/postUserDetail/postUserDetail.js
+// pages/submitOrder/submitOrder.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    postUserInfo:{},
-    imgUrls: [],
-    indicatorDots: true,
-    autoplay: true,
-    circular:true,
-    interval: 5000,
-    duration: 1000,
+    activityInfo:{},
+    remark:'',
+    isLoading:false,
+    timer:null
   },
 
-  handlePreviewImg(e){
-    wx.previewImage({
-      current: e.currentTarget.dataset.src, // 当前显示图片的http链接
-      urls: this.data.imgUrls // 需要预览的图片http链接列表
+  handleSubmitOrder(){
+    this.setData({
+      isLoading:true
     })
+    const timer = setTimeout(() => {
+      this.setData({
+        isLoading:false,
+        timer
+      })
+      wx.showToast({
+        title: '成功',
+        icon: 'success',
+        duration: 2000
+      })
+      if(this.data.timer){
+        clearTimeout(this.data.timer)
+      }      
+    }, 1000);
   },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
     const eventChannel = this.getOpenerEventChannel()
-    eventChannel.on('postUserInfo', (res)=> {
+    eventChannel.on('activityInfo', (res)=> {
       this.setData({
-        postUserInfo:res.data,
-        imgUrls:[res.data.imgSrc]
+        activityInfo:res.data,
       })
+      console.log(this.data.activityInfo);
     })
   },
 

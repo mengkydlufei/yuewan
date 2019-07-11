@@ -1,0 +1,33 @@
+<!--pages/submitOrder/submitOrder.wxml-->
+<container class="submit-order">
+  <van-card
+    title-class='title-class'
+    thumb-class='thumb-class'
+    num=""
+    price=""
+    desc="啊哈哈哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈哈啊哈哈哈哈哈"
+    title="{{activityInfo.name}}"
+    thumb="../{{activityInfo.imgSrc}}"
+  />
+  <van-cell-group style='margin-top:1rem;' border="{{ false }}">
+    <van-cell title="服务" value="活动定金" />
+  </van-cell-group>
+  <van-cell-group style='margin-top:1rem;' border="{{ false }}">
+      <van-field
+        value="{{ remark }}"
+        label="备注"
+        type="textarea"
+        placeholder="简单说下你的要求吧~"
+        autosize
+        border="{{ false }}"
+      />
+    <van-cell title="费用" value="{{activityInfo.price}}.00" />
+    <van-cell title="合计" value="{{activityInfo.price}}.00" />
+  </van-cell-group>
+  <van-submit-bar
+    loading='{{isLoading}}'
+    price="{{activityInfo.price*100}}"
+    button-text="立即支付"
+    bind:submit="handleSubmitOrder"
+  />
+</container>

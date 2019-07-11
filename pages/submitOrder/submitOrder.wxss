@@ -1,0 +1,7 @@
+/* pages/submitOrder/submitOrder.wxss */
+.thumb-class {
+  border-radius: 1rem;
+}
+.title-class {
+  font-size: 1rem;
+}

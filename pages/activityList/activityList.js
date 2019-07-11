@@ -22,6 +22,15 @@ Page({
     ]
   },
 
+  handleClick(){
+    wx.navigateTo({
+      url: `../activityDetail/activityDetail`,
+      success: function(res) {
+        res.eventChannel.emit('personInfo', { data: {} })
+      }
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

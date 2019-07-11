@@ -41,7 +41,14 @@ Page({
         duration:2000,
         message:`${this.data.personInfo.name}\n暂不可预约`
       })
+      return
     }
+    wx.navigateTo({
+      url: `../submitOrder/submitOrder`,
+      success: (res) => {
+        res.eventChannel.emit('activityInfo', { data: {price:99,...this.data.personInfo} })
+      }
+    })
   },
 
   previewUserDetail(e){

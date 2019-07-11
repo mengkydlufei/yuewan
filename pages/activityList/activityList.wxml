@@ -1,7 +1,7 @@
 <!--pages/activityList/activityList.wxml-->
 <container class="activity-list">
   <van-cell-group border='{{false}}'>
-    <van-cell wx:for="{{activityList}}" wx:key="{{index}}" data-id='{{item.id}}' is-link>
+    <van-cell bind:click='handleClick' wx:for="{{activityList}}" wx:key="{{index}}" data-id='{{item.id}}' is-link>
       <view slot="title">
         <view style='display:flex;' slot="title">
             <view class="avatar-wrapper">

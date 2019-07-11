@@ -5,7 +5,8 @@
     "pages/post/post",
     "pages/activityDetail/activityDetail",
     "pages/postUserDetail/postUserDetail",
-    "pages/activityList/activityList"
+    "pages/activityList/activityList",
+    "pages/submitOrder/submitOrder"
   ],
   "window": {
     "backgroundTextStyle": "light",
