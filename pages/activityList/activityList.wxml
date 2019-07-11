@@ -1,2 +1,18 @@
 <!--pages/activityList/activityList.wxml-->
-<text>pages/activityList/activityList.wxml</text>
+<container class="activity-list">
+  <van-cell-group border='{{false}}'>
+    <van-cell wx:for="{{activityList}}" wx:key="{{index}}" data-id='{{item.id}}' is-link>
+      <view slot="title">
+        <view style='display:flex;' slot="title">
+            <view class="avatar-wrapper">
+              <image class='avatar' src="{{item.imgSrc}}" alt="title"/>
+            </view>
+            <view style='margin-left:1rem;' class='basic-info'>
+              <text class='title'>{{item.name||'加载中'}}</text>
+              <text class="van-ellipsis">{{item.address}}</text>
+            </view>
+          </view>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</container>

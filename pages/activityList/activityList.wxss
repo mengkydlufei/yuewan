@@ -1,1 +1,32 @@
 /* pages/activityList/activityList.wxss */
+.title {
+  /* font-size: 1rem; */
+  color: black;
+}
+
+.avatar-wrapper {
+  width: 3rem;
+  height: 3rem;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.basic-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.van-cell {
+  align-items: center;
+}
+
+.van-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width:74vw;
+}
