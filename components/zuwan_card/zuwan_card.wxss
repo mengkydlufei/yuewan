@@ -18,17 +18,9 @@
 .like-info {
   position: absolute;
   bottom: 55rpx;
-  left: 8rpx;
+  right: 8rpx;
 }
 
-.like-count {
-  color: red;
-  margin-left: 5rpx;
-}
-
-.like-icon {
-  color: red;
-}
 
 .location-info {
   position: absolute;
@@ -40,12 +32,5 @@
 
 .location-name {
   font-size: 0.8rem;
-}
-
-.card-name {
-  position: absolute;
-  bottom: 55rpx;
-  right: 8rpx;
-  color: white;
   text-shadow: 2rpx 2rpx 5rpx #000;
 }

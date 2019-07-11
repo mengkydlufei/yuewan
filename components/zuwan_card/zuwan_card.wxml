@@ -1,14 +1,12 @@
 <!--components/zuwan_card/zuwan_card.wxml-->
 <view class='zuwan-card'>
-  <text class='card-name'>{{userInfo.name}}</text>
   <image class='card-img' mode="scaleToFill" src="{{userInfo.imgSrc}}"></image>
   <view class='location-info'>
     <van-icon class='location-icon' name="location" />
     <text class='location-name'>{{userInfo.location}}</text>
   </view>
   <view class='like-info'>
-    <van-icon class='like-icon' style="color:{{userInfo.isLiked?'red':'white'}};" name="like" />
-    <text wx:if='{{userInfo.likeCount>0}}' class='like-count'>{{userInfo.likeCount}}</text>
+    <van-tag round type="{{userInfo.status?'success':''}}">{{userInfo.status?'可预约':'不可预约'}}</van-tag>
   </view>
   <text class='zuwan-title'>{{userInfo.title}}</text>
 </view>

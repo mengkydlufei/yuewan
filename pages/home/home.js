@@ -14,13 +14,13 @@ Page({
   handleCardClick(res){
     const {detail:id} = res
     const clickedPerson = this.data.personList.find(item=>item.id===id)
-    console.log('clickedPerson: ', clickedPerson);
+    // console.log('clickedPerson: ', clickedPerson);
     // Toast.success({
     //   duration:2000,
     //   message:`${clickedPerson.name}`
     // })
     wx.navigateTo({
-      url: `../person_detail/person_detail?id=${id}`,
+      url: `../activityDetail/activityDetail`,
       success: function(res) {
         res.eventChannel.emit('personInfo', { data: clickedPerson })
       }
@@ -37,12 +37,11 @@ Page({
       name:'guygubaby',
       imgSrc:'../../static/img/2.png',
       location:'上海市',
-      isLiked:false,
-      likeCount:0,
+      status:0,
       title:"this is xixi"
     }
     for( let i = 0; i < size ; i++ ){
-      baseObj = {...baseObj,id:i,name:`mistletoe${i}`,imgSrc:`../../static/img/${i+1}.png`} 
+      baseObj = {...baseObj,id:i,name:`mistletoe${i}`,imgSrc:`../../static/img/${i+1}.png`,status:i%2} 
       tempList.push(baseObj)
     }
     const timer = setTimeout(() => {

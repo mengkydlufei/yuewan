@@ -1,4 +1,4 @@
-<!--pages/person_detail/person_detail.wxml-->
+<!--pages/activityDetail/activityDetail.wxml-->
 <view class='person-detail'>
   <swiper
     class='swiper'
@@ -92,4 +92,5 @@
     </view>
   </container>
 </view>
+
 

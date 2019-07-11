@@ -1,4 +1,4 @@
-/* pages/person_detail/person_detail.wxss */
+/* pages/activityDetail/activityDetail.wxss */
 .person-detail {
   width: 100%;
   /* margin: 0 1%; */

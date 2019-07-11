@@ -1,4 +1,3 @@
-// pages/person_detail/person_detail.js
 Page({
 
   /**
@@ -44,9 +43,9 @@ Page({
         personInfo:res.data
       })
       console.log(this.data.personInfo);
-      wx.setNavigationBarTitle({
-        title: this.data.personInfo.name
-      })
+      // wx.setNavigationBarTitle({
+      //   title: this.data.personInfo.name
+      // })
     })
   },
 

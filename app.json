@@ -3,7 +3,7 @@
     "pages/home/home",
     "pages/mine/mine",
     "pages/post/post",
-    "pages/person_detail/person_detail"
+    "pages/activityDetail/activityDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,6 +42,7 @@
     "van-button": "../../miniprogram_npm/vant-weapp/button/index",
     "van-icon": "./miniprogram_npm/vant-weapp/icon/index",
     "van-row": "../../miniprogram_npm/vant-weapp/row/index",
-    "van-col": "../../miniprogram_npm/vant-weapp/col/index"
+    "van-col": "../../miniprogram_npm/vant-weapp/col/index",
+    "van-tag": "../../miniprogram_npm/vant-weapp/tag/index"
   }
 }
