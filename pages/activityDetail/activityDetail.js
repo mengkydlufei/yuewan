@@ -39,7 +39,7 @@ Page({
     if(personStatus===0) {
        Toast.fail({
         duration:2000,
-        message:`${this.data.personInfo.name}暂不可预约`
+        message:`${this.data.personInfo.name}\n暂不可预约`
       })
     }
   },
