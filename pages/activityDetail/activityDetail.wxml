@@ -19,7 +19,7 @@
         <image bind:tap="previewUserDetail" data-id='{{personInfo.id}}' class='avatar' src="{{personInfo.imgSrc||'../../static/img/4.png'}}" alt="{{personInfo.name}}"/>
         <view style='margin-left:1rem;' class='basic-info'>
           <text bind:tap="previewUserDetail" class='postperson-name'>{{personInfo.name||'加载中'}}</text>
-          <text class='post-desc'>活动发起者</text>
+          <text>活动发起者</text>
         </view>
       </view>
       <van-icon slot="right-icon" style='margin-top:0.5rem;font-size: 2rem;' name='paid'></van-icon>

@@ -15,9 +15,9 @@
   font-size: 1rem;
 }
 
-.like-info {
+.status-info {
   position: absolute;
-  bottom: 55rpx;
+  bottom: 2rem;
   right: 8rpx;
 }
 

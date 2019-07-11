@@ -5,7 +5,7 @@
     <van-icon class='location-icon' name="location" />
     <text class='location-name'>{{userInfo.location}}</text>
   </view>
-  <view class='like-info'>
+  <view class='status-info'>
     <van-tag round type="{{userInfo.status?'success':''}}">{{userInfo.status?'可预约':'不可预约'}}</van-tag>
   </view>
   <text class='zuwan-title'>{{userInfo.title}}</text>
