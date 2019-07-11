@@ -13,42 +13,49 @@
       </swiper-item>
     </block>
   </swiper>
-  <van-icon class='order-icon' name='paid'></van-icon>
+  <!-- <van-icon class='order-icon' name='paid'></van-icon> -->
   <container class='detail-wrapper'>
     <view class='particular-info'>
       <view class="tag-title">
         <text>活动信息</text>
       </view>
-      <van-row>
-        <van-col span='20'>
-          <van-row gutter='5' class='particular-wrapper'>
-            <van-col offset='1' span="6">
-              <text class='detail-label'>活动名称: </text>
-            </van-col>
-            <van-col span="17">
-              <text class="detail-content">啊哈哈哈哈asd</text>
-            </van-col>
-            <van-col offset='1' span="6">
-              <text class='detail-label'>活动地址: </text>
-            </van-col>
-            <van-col span="17">
-              <text class="detail-content">啊哈哈哈哈</text>
-            </van-col>
-            <van-col offset='1' span="6">
-              <text class='detail-label'>活动内容: </text>
-            </van-col>
-            <van-col span="17" >
-              <text class="detail-content">啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈
-              </text>
-            </van-col>
-          </van-row>
+      <van-row style='margin:0.5rem 0;'>
+        <van-col offset='1' span='4'>
+           <image class='avatar' src="../../static/img/2.png" alt="avatar"/>
+        </van-col>
+        <van-col span='15'>
+          <view class='activity-post-info'>
+            <text class='postperson-name'>{{personInfo.name||'加载中'}}</text>
+            <text class='post-desc'>活动发起者</text>
+          </view>
         </van-col>
         <van-col span='4' class='like-icon-wrapper'>
-          <view class='basic-right'><van-icon class='like-icon' name="like-o" /></view>
+          <view class='basic-right'><van-icon class='like-icon' name="paid" /></view>
+        </van-col>
+      </van-row>
+      <van-row class='particular-wrapper'>
+        <van-col offset='1' span="5">
+          <text class='detail-label'>活动名称: </text>
+        </van-col>
+        <van-col span="17">
+          <text class="detail-content">啊哈哈哈哈asd</text>
+        </van-col>
+        <van-col offset='1' span="5">
+          <text class='detail-label'>活动地址: </text>
+        </van-col>
+        <van-col span="17">
+          <text class="detail-content">啊哈哈哈哈</text>
+        </van-col>
+        <van-col offset='1' span="5">
+          <text class='detail-label'>活动内容: </text>
+        </van-col>
+        <van-col span="17" >
+          <text class="detail-content">啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈
+          </text>
         </van-col>
       </van-row>
       
-      <view style='margin-top:0.5rem;' class="tag-title">
+      <!-- <view style='margin-top:0.5rem;' class="tag-title">
         <text>发起者信息</text>
       </view>
       <van-row>
@@ -88,7 +95,7 @@
         <van-col span='18'>
           {{personInfo.constellation||'射手座'}}
         </van-col>
-      </van-row>
+      </van-row> -->
     </view>
   </container>
 </view>

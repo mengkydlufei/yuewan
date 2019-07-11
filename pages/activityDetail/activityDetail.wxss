@@ -72,14 +72,6 @@
   display: flex;
 }
 
-.detail-label {
-  margin-right: 1rem;
-}
-
-.detail-content {
-
-}
-
 .like-icon-wrapper {
   display:flex;
   justify-content:center;
@@ -98,4 +90,9 @@
 .user-name {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.activity-post-info {
+  display: flex;
+  flex-direction: column;
 }
