@@ -1,3 +1,5 @@
+import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
+
 Page({
 
   /**
@@ -29,6 +31,17 @@ Page({
       current: e.currentTarget.dataset.src, // 当前显示图片的http链接
       urls: this.data.imgUrls // 需要预览的图片http链接列表
     })
+  },
+
+  handleAcceptActivity(e){
+    const {currentTarget:{dataset:{activityId,personStatus}}}=e
+    console.log('activityId: ', activityId);
+    if(personStatus===0) {
+       Toast.fail({
+        duration:2000,
+        message:`${this.data.personInfo.name}暂不可预约`
+      })
+    }
   },
 
   previewUserDetail(e){

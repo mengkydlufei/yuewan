@@ -22,12 +22,13 @@
           <text>活动发起者</text>
         </view>
       </view>
-      <van-icon slot="right-icon" style='margin-top:0.5rem;font-size: 2rem;' name='paid'></van-icon>
+      <van-icon bind:tap='handleAcceptActivity' data-person-status='{{personInfo.status}}' data-activity-id='activity0' slot="right-icon" style='margin-top:0.5rem;font-size: 2rem;' name='paid'></van-icon>
     </van-cell>
     <van-cell title="活动名称" value="啊哈哈哈哈asd" />
     <van-cell title="活动地址" value="啊哈哈哈哈" />
     <van-cell title="活动内容" value="" label="啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈" border="{{ false }}" />
   </van-cell-group>
+  <van-toast id="van-toast" />
 </view>
 
 

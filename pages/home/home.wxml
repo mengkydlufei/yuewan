@@ -1,3 +1,2 @@
 <!--pages/home/home.wxml-->
 <waterfall-list bind:handleclick='handleCardClick' person-list='{{personList}}'></waterfall-list>
-<van-toast id="van-toast" />

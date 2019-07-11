@@ -1,7 +1,6 @@
 {
   "usingComponents": {
-    "waterfall-list":"../../components/waterfall_list/waterfall_list",
-    "van-toast": "../../miniprogram_npm/vant-weapp/toast/index"
+    "waterfall-list":"../../components/waterfall_list/waterfall_list"
   },
   "navigationBarTitleText":"首页",
   "enablePullDownRefresh":true
