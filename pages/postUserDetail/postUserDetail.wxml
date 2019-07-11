@@ -16,20 +16,17 @@
     </swiper>
   </header>
   <section class='body'>
-    <view style='margin-top:0.5rem;' class="tag-title">
-     </view>
-      <van-row>
-        <van-col offset='1' span='4'>
-          <image class='avatar' src="{{postUserInfo.imgSrc}}" alt="avatar"/>
-        </van-col>
-        <van-col span='19' style='height:3.5rem;display:flex;'>
-          <view class='basic-info'>
-            <text class='post-user-name'>{{postUserInfo.name||'加载中'}}</text>
-            <text class='post-user-address'>{{postUserInfo.location}}  {{postUserInfo.constellation}}</text>
-          </view>
-        </van-col>
-      </van-row>
       <van-cell-group border="{{ false }}">
+        <van-cell value="">
+          <view style='display:flex;' slot="title">
+            <image class='avatar' src="{{postUserInfo.imgSrc}}" alt="avatar"/>
+            <view style='margin-left:1rem;' class='basic-info'>
+              <text class='post-user-name'>{{postUserInfo.name||'加载中'}}</text>
+              <text class='post-user-address'>{{postUserInfo.location}}  {{postUserInfo.constellation}}</text>
+            </view>
+          </view>
+          <van-icon slot="right-icon" style='margin-top:0.5rem;font-size: 2rem;' name='like-o'></van-icon>
+        </van-cell>
         <van-cell title="职业" value="{{postUserInfo.profession||'学生'}}" />
         <van-cell title="年龄" value="{{postUserInfo.age||21}}" />
         <van-cell title="性别" value="{{postUserInfo.sex||'女'}}" />

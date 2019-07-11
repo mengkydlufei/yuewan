@@ -14,20 +14,16 @@
     </block>
   </swiper>
   <van-cell-group border="{{ false }}" title='活动信息'>
-    <van-row style='margin:0.5rem 0;'>
-      <van-col offset='1' span='4'>
+    <van-cell value="">
+      <view style='display:flex;' slot="title">
         <image bind:tap="previewUserDetail" data-id='{{personInfo.id}}' class='avatar' src="{{personInfo.imgSrc||'../../static/img/4.png'}}" alt="{{personInfo.name}}"/>
-      </van-col>
-      <van-col span='15'>
-        <view class='activity-post-info'>
+        <view style='margin-left:1rem;' class='basic-info'>
           <text bind:tap="previewUserDetail" class='postperson-name'>{{personInfo.name||'加载中'}}</text>
           <text class='post-desc'>活动发起者</text>
         </view>
-      </van-col>
-      <van-col span='4' class='like-icon-wrapper'>
-        <view style='margin-top:0.5rem'><van-icon class='like-icon' name="paid" /></view>
-      </van-col>
-    </van-row>
+      </view>
+      <van-icon slot="right-icon" style='margin-top:0.5rem;font-size: 2rem;' name='paid'></van-icon>
+    </van-cell>
     <van-cell title="活动名称" value="啊哈哈哈哈asd" />
     <van-cell title="活动地址" value="啊哈哈哈哈" />
     <van-cell title="活动内容" value="" label="啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈" border="{{ false }}" />

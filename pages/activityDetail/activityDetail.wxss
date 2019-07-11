@@ -28,8 +28,8 @@
   margin-right: 0.4rem;
 }
 
-
-.activity-post-info {
+.basic-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }

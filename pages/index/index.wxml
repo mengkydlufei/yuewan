@@ -1,4 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-  <van-button bind:click='test'>test</van-button>
-</view>
