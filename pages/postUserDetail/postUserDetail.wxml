@@ -33,8 +33,9 @@
         <van-cell title="身高" value="{{postUserInfo.height||168}}cm" />
         <van-cell title="体重" value="{{postUserInfo.weight||48}}kg" />
         <van-cell title="星座" value="{{postUserInfo.constellation||'射手座'}}" />
-        <van-cell title="个性签名" value="" label="啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈" border="{{ true }}" />
+        <van-cell title="个性签名" value="" label="啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈" />
         <van-cell title="TA发布的活动" 
+          border="{{ false }}"
           is-link 
           link-type="navigateTo"
           url="/pages/activityList/activityList?id={{postUserInfo.id}}" />

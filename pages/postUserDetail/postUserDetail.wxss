@@ -1,17 +1,21 @@
 /* pages/postUserDetail/postUserDetail.wxss */
 .swiper {
-  height: 48vh;
+  height: 80vh;
 }
 
 .slide-image {
   width: 100vw;
-  height: 48vh;
+  height: 80vh;
 }
 
 .avatar {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+}
+
+.body {
+  margin-bottom: 1rem;
 }
 
 .post-user-address {
